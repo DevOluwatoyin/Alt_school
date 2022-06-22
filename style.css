@@ -1,175 +1,97 @@
+/* universal declarations */
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
-body {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  box-sizing: border-box;
-}
-
 img {
-  width: 150px;
-  height: 100px;
-  display: inline-block;
-  padding: 20px;
-  vertical-align: middle;
-  border: none;
+  width: 100%; /* so the pictures can be responsive, it an habit thing for me.*/
 }
+/* end of universal declarations */
 
-.nav-list {
-  background-color: #ffffff;
-  /* margin: 0;
-  padding:0; */
+/* header styling. The header is a flexbox that contains two contents (logo and div) this div contains the home and login links. the reason for the flex is so i can arrange the contents*/
+header {
+  padding: 3em 1.5em 1.5em;
   display: flex;
-  /* justify-content: flex-end; */
-  align-items: center;
 }
-
-.nav-item{
-  list-style: none;
-  margin-right: 4rem;
-  cursor: pointer;
-  
+/* if you look at the html i created a div with an id of "logo_container", put the alt_school logo inside it from this line and adjust the width of the logo using the div.*/
+#header_navbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 87.8%;
 }
-
-.nav-item a {
+a {
   text-decoration: none;
-  color: #000000;
-  font-size: 20px;
+  color: black;
+}
+#nav_home {
+  /*individual styling of the home button*/
+  margin-right: 2.5em;
   font-weight: bold;
-  
+  font-size: 1.17rem;
 }
+#nav_login {
+  /*individual styling of the login button*/
+  font-size: 0.83rem;
+  color: white;
+  background-color: black;
+  padding: 1.35em 1.55em;
+  letter-spacing: 1.3px;
+}
+/* end of header */
 
-.nav-item:first-child {
-  margin-right: auto;
-  margin-left: 1rem;
-}
-#home {
-  color: #ffffff;
-}
-
-#home:hover {
-  background: blue;
-  color: #ffffff;
-  transition: all;
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.main {
-  background-image: linear-gradient(120deg, #6a6ff5 0%, #000000 100%);  
-  box-sizing: border-box;
-  padding: 130px 0px 130px 0px;
-  display: block;
+/* start of main declarations */
+#main_container {
+  margin-top: 0.6em;
+  background-color: #21234d; /* change this is linear gradient and use the right gradient colors*/
+  color: white;
   text-align: center;
-  
-  }
+  margin-bottom: 9em;
+}
+#main_content {
+  margin: 0 auto;
+  padding: 9.2em; /* in case you are wondering how the text is at the middle like that, i used text align to move it to the center and this padding kind of creates equal spaces inside the box of the main content. I specifically created a container for the text alone, it wouldnt be appropriate to target indiviaual text alone (based on my experience level).*/
+}
+#text1 {
+  padding-bottom: 0.6em;
+  font-size: 3rem;
+}
+#text2 {
+  color: white;
+}
+/* end of main declarations */
 
-  h1, h3 {
-    padding: 10px;
-    text-align: center;
-    border: 50px;
-  }
-
-    h1 {
-  color: #ffffff;
-  font-size: 50px;
-  font-weight: 700;
-  text-transform: inherit;
-  margin: 0px 0px 20px;
-  font-family: 'Inter', sans-serif;
-  line-height: 1.2;
-  
-    }
-
-    h3 {
-      font-size: inherit;
-      font-style: inherit;
-      color: #fafafa;
-      font-weight: lighter;
-      padding: 0px;
-    }
-
-    footer {
-      background-color: #000000;
-      color: #ffffff;
-      /* display: flex;
-      flex-direction: column; */
-      position: fixed;
-      align-content: flex-start;
-      width: 100%;
-      bottom: 0px;
-      padding: 40px 0px 80px;
-    }
-
-    .Section1 {
-      display: flex;
-      padding: 20px 50px;
-      line-height: 2;
-    }
-
-    .Section1 h4 {
-      margin-bottom: 10px;
-      font-size: large;
-    }
-    .col1 {
-      background-color: blue;
-      flex-grow: 1;
-      flex-basis: 100%;
-      
-    }
-
-    .col2 {
-      background-color: green;
-      flex-grow: 1;
-      flex-basis: 100%;
-    }
-
-    .col3 {
-      background-color: purple;
-      flex-grow: 1;
-      flex-basis: 100%;
-    }
-
-    .col4 {
-      background-color: orange;
-      flex-grow: 1;
-      flex-basis: 100%;
-    }
-
-    .col5 {
-      background-color: red;
-      flex-grow: 1;
-      flex-basis: 100%;
-    }
-
-    .col6 {
-      background-color: aqua;
-      flex-grow: 1;
-      flex-basis: 100%;
-    }
-
-    .Section2 {
-      border-top: 1px dotted white;
-      max-width: 1200px;
-      margin: 0 auto;
-    /* border-style: dotted;
-    border-width: 1px 0px 0px 0px;
-    border-color: rgba(255,255,255,0.59);
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-    margin-top: 80px;
-    margin-bottom: 0px;
-    margin: 0 auto;
-    padding: 20px 0px;
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    max-width: 1200px; */
-    }
+/* start of footer declarations */
+footer {
+  /* this is the footer itself, but i just made it the footer background and the parent element for organising other things in it*/
+  background-color: black;
+  color: white;
+}
+.footer_hero {
+  /*this is for the space at the sides of the footer*/
+  margin: 0 auto;
+  width: 70%;
+}
+#footer_container {
+  /*this is for the organisation of the footer contents. Each of those sections where wrapped in a div, so those divs are the content, thats why when u look at line 79 i used justify-"content"*/
+  display: flex;
+  flex-flow: row nowrap;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 0.5em;
+  padding: 5em 0;
+}
+h4 {
+  margin-bottom: 1.5em; /*you can still adjust the footer headers font size here, i dont think it the same as the original website*/
+}
+p {
+  color: grey;
+  margin-bottom: 1em;
+  font-size: 0.9rem; /*you can still adjust the footer text font size here, i dont think it the same as the original website*/
+}
+#copyright {
+  border-top: 1px dotted white;
+  padding: 1.5em 0;
+}
+/* end of footer declarations */
