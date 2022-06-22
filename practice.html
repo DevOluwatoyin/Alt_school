@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,64 +8,86 @@
     <title>Altschool Landing page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>    
-    <navbar>
-        <ul class="nav-list">
-            <li class="nav-item"><a href=""><img src="myimage/Altschool-logo.png" alt="altschool logo"></a></li>
-            <li class="nav-item" id="home"><a href="">Home</a></li>
-            <li class="nav-item" id="login"><a href="">LOG IN</a></li>
-        </ul>
-    </navbar>
 
-    <section class="main">
-        <h1>My Account</h1>
-        <h3>Welcome to Altschool Africa, here's your dashboard</h3>
+<body>
+
+    <!-- header (logo and nav bar) 
+    nav wrapped in a separate div so as to aligh the text "link" to the right. You used "navbar", navbar is not an html tag-->
+    <!-- anytime i want to use flexbox i like to wrap my contents in divs. -->
+    <header>
+        <div id="logo_container">
+            <a href=""><img src="myimage/Altschool-logo.png" alt="altschool logo"></a>
+        </div>
+        <div id="header_navbar">
+            <nav>
+                <a href="#" id="nav_home">Home</a>
+                <a href="#" id="nav_login">LOG IN</a>
+            </nav>
+        </div>
+    </header>
 
 
-    </section>
+
+
+    <!-- best to just wrap this in the main tag (sematic tag and for the whole search engine thing)-->
+    <main>
+        <div id="main_container">
+            <div id="main_content">
+                <h1 id="text1">My Account</h1>
+                <p id="text2">Welcome to Altschool Africa, here's your dashboard</p>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- why did you wrap the header and text in divs. I have changed it to header and paragraph text.Each sections are wrapped in divs -->
     <footer>
-        <section class="Section1">
-            <div class="col1">
-                
-                <div>0800ALTSCHOOL</div>
-            </div>
+        <div class="footer_hero">
+            <div id="footer_container">
+                <div class="col">
+                    <h4>TalentQL</h4>
+                    <p>0800ALTSCHOOL</p>
+                </div>
 
-            <div class="col2">
-                <h4>Schools</h4>
-                <div>School of Software Engineering</div>
-                <div>School of Product</div>
-            </div>
+                <div class="col">
+                    <h4>Schools</h4>
+                    <p>School of Software Engineering</p>
+                    <p>School of Product</p>
+                </div>
 
-            <div class="col3">
-                <h4>Specializations</h4>
-                <div>Frontend Engineering</div>
-                <div>Backend Engineering</div>
-                <div>Cloud Engineering</div>
-            </div>
+                <div class="col">
+                    <h4>Specializations</h4>
+                    <p>Frontend Engineering</p>
+                    <p>Backend Engineering</p>
+                    <p>Cloud Engineering</p>
+                </div>
 
-            <div class="col4">
-                <h4>Companies</h4>
-                <div>Hire our Grads</div>
-                <div>Collaborate with us</div>
-            </div>
+                <div class="col">
+                    <h4>Companies</h4>
+                    <p>Hire our Grads</p>
+                    <p>Collaborate with us</p>
+                </div>
 
-            <div class="col5">
-                <h4>About Us</h4>
-                <div>Our Story</div>
-                <div>Contact Us</div>
-                <div>Blog</div>
-            </div>
+                <div class="col">
+                    <h4>About Us</h4>
+                    <p>Our Story</p>
+                    <p>Contact Us</p>
+                    <p>Blog</p>
+                </div>
 
-            <div class="col6">
-                <h4>Resources</h4>
-                <div>Terms of Service</div>
-                <div>FAQs</div>
+                <div class="col">
+                    <h4>Resources</h4>
+                    <p>Terms of Service</p>
+                    <p>FAQs</p>
+                </div>
             </div>
-        </section>
+        </div>
 
-        <section class="Section2">
-            <div ><small>&copy2022 TalentQL. All rights reserved.</small></div>
-        </section>
+        <!-- this is the copyright text, still wrapped in the footer tag, cause it is part of the footer -->
+        <div class="footer_hero">
+            <p id="copyright">&copy2022 TalentQL. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 
